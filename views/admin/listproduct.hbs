@@ -1,0 +1,41 @@
+<section >
+  <div class="container mt-5">
+    <div class="row ">
+      <div class="col-md-12 ">
+         <div class="card ">
+            <div class="card-header">
+                <h2>List Product <a href="/admin/product/" class="btn btn-success" style="float:right;">Add</a></h2>
+                
+            </div>
+            <div class="card-body">                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Id</th>
+                            <th scope="col">Name</th>
+                         <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each products}}
+                            <tr>
+                                <td>{{product_id}}</td>
+                                <td>{{name}}</td>
+                               
+                                <td>
+                    <a href="/admin/editProduct/{{this._id}}">Edit</a>
+                   
+                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+      </div>
+       
+    </div>
+</div>
+</section>
+

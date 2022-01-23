@@ -1,0 +1,46 @@
+<section >
+  <div class="container mt-5">
+    <div class="row ">
+      <div class="col-md-12 ">
+         <div class="card ">
+            <div class="card-header">
+                <h3>List Warehouse Details <a href="/admin/addstock/" class="btn btn-success" style="float:right;">Add</a></h3>
+                
+            </div>
+            <div class="card-body"> 
+                {{#if message}}
+                <div class="alert alert-success" role="alert">
+                {{message}}
+                </div>
+                {{/if}}
+                <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Warehouse Number</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Quantity</th> 
+                     <th scope="col">Action</th>                  
+                </tr>
+            </thead>
+            <tbody>
+               {{#each stockProducts}} 
+                <tr> 
+                    <td>{{this.warehouse_number}} </td>  
+                    <td>{{this.productDetails.name}} </td>
+                    <td>{{this.quantity}} </td><td>
+                    <a href="/admin/editStock/{{this._id}}">Edit</a>
+                    {{#if this.quantity}}
+                    <a href="/admin/Unstockquantity/{{this._id}}" class="btn btn-danger btn-sm" >Unstock</a>
+               {{/if}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+        </table>
+       </div>
+        </div>
+
+      </div>
+       
+    </div>
+</div>
+</section>

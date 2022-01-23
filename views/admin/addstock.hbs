@@ -1,0 +1,51 @@
+<section>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-8 mt-5 ">
+                <div class="card">
+                    <div class="card-header">
+                      <h3>Add Stock <a href="/admin/viewstock/" class="btn btn-success" style="float:right;">List</a></h3>  
+                    </div>
+                    <div class="card-body">
+
+                         {{#if message}}
+                        <div class="alert alert-success" role="alert">
+                        {{message}}
+                        </div>
+                        {{/if}}
+                      <form action="/admin/addstock" method="POST" role="form" enctype="multipart/form-data">
+
+                      <select class="form-control" id="product_id"  name="product_id" required>
+                          <option value="" >Select Product</option>
+                           {{#each products}}
+
+                        <option value="{{product_id}}" > {{name}} - {{product_id}}</option>
+                        {{/each}}
+                        </select>
+                        <br>
+                         <select class="form-control" id="warehouse_number"  name="warehouse_number" required>
+                          <option value="" >Select Warehouse Number</option>
+                           {{#each warehouse}}
+
+                        <option value="{{warehouse_number}}" > {{warehouse_number}}</option>
+                        {{/each}}
+                        </select>
+                      
+                            <div class="form-group p-2">
+                                <label for="name">Quantity</label>
+                                <input type="text" class="form-control " name="quantity" id="quantity" placeholder=" Quantity" />
+                            </div>
+
+                           
+
+                           
+
+                            <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

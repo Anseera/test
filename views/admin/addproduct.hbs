@@ -1,0 +1,45 @@
+<section>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-8 mt-5 ">
+                <div class="card">
+                    <div class="card-header">
+                      <h3>Add Product  <a href="/admin/listproduct/" class="btn btn-success" style="float:right;">List</a></h3>  
+                    </div>
+                    <div class="card-body">
+
+                        {{#if message}}
+                        <div class="alert alert-success" role="alert">
+                        {{message}}
+                        </div>
+                        {{/if}}
+                         {{#if errMessage}}
+                        <div class="alert alert-danger" role="alert">
+                        {{errMessage}}
+                        </div>
+                        {{/if}}
+                        
+                        <form action="/admin/addProduct" method="POST" role="form" enctype="multipart/form-data">
+                        <div class="form-group p-2">
+                                <label for="productid">Product Id</label>
+                                <input type="text" class="form-control " name="product_id" id="product_id" placeholder=" Product Id" required />
+                            </div>
+
+                            <div class="form-group p-2">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control " name="name" id="name" placeholder=" Name" required />
+                            </div>
+
+                          
+                            
+                          
+
+                            <button type="submit" class="btn btn-primary mt-5">Add Product</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+<section>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-8 mt-5 ">
+                <div class="card">
+                    <div class="card-header">
+                      <h3>Edit Warehouses Details</h3>  
+                    </div>
+                    <div class="card-body">
+
+                        {{#if message}}
+                        <h2>{{message}}</h2>
+                        {{/if}}
+                        <form action="/admin/upadateWarehouses/{{warehouses._id}}" method="POST" role="form" enctype="multipart/form-data">
+
+                            <div class="form-group p-2">
+                                <label for="name">Warehouse Number</label>
+                                <input type="text" value="{{warehouses.warehouse_number}}" class="form-control" name="warehouse_number" id="warehouse_number" placeholder="Warehouse Number" required />
+                            </div>
+
+                            <div class="form-group p-2">
+                                <label for="price">Stock Limit</label>
+                                <input type="text" value="{{warehouses.stock_limit}}" class="form-control " name="stock_limit" id="stock_limit" placeholder="Stock Limit" req/>
+                            </div>
+
+                                 
+
+                            <button type="submit" class="btn btn-primary mt-5">Update</button>
+                            <br><br><br>
+                            
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
