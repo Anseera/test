@@ -10,12 +10,9 @@ module.exports={
     addProduct:(productDetails)=>{
         return new Promise(async(resolve,reject)=>{
             let response={};
-            console.log("nabas"+productDetails.proid)
              let productid=await db.get().collection('product').findOne({product_id:productDetails.product_id})
-            console.log("aa"+productid)
             if(!productid){
                 db.get().collection('product').insertOne(productDetails).then((response)=>{
-                console.log(response)
                 resolve(response)
                 })
             }
