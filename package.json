@@ -28,13 +28,13 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Anseera/assignment.git"
+    "url": "git+https://github.com/Anseera/test.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Anseera/assignment/issues"
+    "url": "https://github.com/Anseera/test/issues"
   },
-  "homepage": "https://github.com/Anseera/assignment#readme",
+  "homepage": "https://github.com/Anseera/test#readme",
   "description": ""
 }
